@@ -78,7 +78,7 @@ resource "vault_jwt_auth_backend_role" "jwt_role" {
   bound_audiences = ["vault.workload.identity"]
   bound_claims_type = "glob"
   bound_claims = {
-    sub = "organization:ars_secureInfraPrj:project:ars_secureInfraPrj:workspace:*:run_phase:*"
+    sub = "organization:ars-SecureOps:project:ARS-AWS-Secret-Engine-Vault-Cluster:workspace:*:run_phase:*"
   }
   user_claim      = "terraform_full_workspace"
   role_type       = "jwt"
