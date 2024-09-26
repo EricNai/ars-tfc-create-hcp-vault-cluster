@@ -5,5 +5,5 @@ output "bound_clain" {
 
 output "role_name" {
     description = "vault JWT Auth Backend Role role name"
-    value = vault_jwt_auth_backend_role.example.role_name 
+    value = vault_jwt_auth_backend_role.jwt_role.role_name 
 }
