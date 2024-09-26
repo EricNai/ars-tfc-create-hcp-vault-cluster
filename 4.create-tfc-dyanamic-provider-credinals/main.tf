@@ -77,7 +77,7 @@ resource "vault_jwt_auth_backend" "jwt" {
 resource "vault_jwt_auth_backend_role" "jwt_role" {
   backend         = vault_jwt_auth_backend.secureops-jwt-backend.path
   role_name       = "vault-jwt-auth-role"
-  token_policies  = vault_policy.admin-policy.name
+  token_policies  = [vault_policy.admin-policy.name]
 
   bound_audiences = ["vault.workload.identity"]
   bound_claims_type = "glob"
